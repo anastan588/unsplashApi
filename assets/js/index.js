@@ -40,7 +40,7 @@ function downLoadPicturesOnPage() {
       const pictureArray = response;
       console.log(pictureArray);
       for (let i = 0; i < pictureArray.length - 1; i += 1) {
-        const url = pictureArray[i].urls.full;
+        const url = pictureArray[i].urls.small;
         createImageBlock(url);
       }
     });
@@ -62,7 +62,7 @@ function downLoadPicturesBySearch() {
       console.log(pictureArray);
       mainBlock.innerHTML = '';
       for (let i = 0; i < pictureArray.length - 1; i += 1) {
-        const url = pictureArray[i].urls.full;
+        const url = pictureArray[i].urls.small;
         createImageBlock(url);
       }
     });
